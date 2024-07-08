@@ -18,7 +18,7 @@ export const removeToken = () => {
 }
 
 const http = axios.create({
-  baseURL: 'http://10.43.192.18:3000/admin', // 'http://121.43.152.195:3000/admin', //
+  baseURL: 'http://121.43.152.195:3000/admin', //'http://10.43.192.18:3000/admin', //
   headers: {
     'Content-Type': 'application/json'
   }

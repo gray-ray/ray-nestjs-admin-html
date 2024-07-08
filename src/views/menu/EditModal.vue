@@ -4,6 +4,7 @@
     :open="openFlag"
     @cancel="handleCancel"
     @ok="handleOk"
+    :destroy-on-close="true"
   >
     <Form
       :model="voRef"
