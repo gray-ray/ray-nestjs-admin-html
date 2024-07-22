@@ -29,7 +29,7 @@ FROM nginx:alpine
 
 
 # 将构建结果从 build 镜像中复制到 Nginx 的静态文件目录
-COPY --from=build /home/ray/workspace/nestjs-admin-html/dist /usr/share/nginx/html
+COPY --from=build /home/ray/workspace/dist /usr/share/nginx/html
 
 # 暴露 Nginx 默认端口
 EXPOSE 80
