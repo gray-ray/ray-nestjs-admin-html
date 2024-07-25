@@ -22,7 +22,7 @@ RUN npm install
 COPY . .
 
 # 构建  项目
-RUN npm run build
+RUN npm run build-only
 
 # 调试构建输出
 #RUN ls -al /home/ray/workspace/dist
@@ -31,6 +31,8 @@ RUN npm run build
 # 使用 Nginx 作为生产环境的服务器
 FROM nginx:alpine
 
+# 复制自定义的 Nginx 配置文件
+COPY nginx/nginx.conf /etc/nginx/conf.d/
 
 # 将构建结果从 build 镜像中复制到 Nginx 的静态文件目录
 # 用了一个名称为 build 的阶段 在第一行定义
